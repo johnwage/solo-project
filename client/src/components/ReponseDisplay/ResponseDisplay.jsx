@@ -38,7 +38,6 @@ const ResponseDisplay = () => {
           </div>
 
           <div>
-            <img />
             <div>
               <h4>cache-control</h4>
               <h5>max-age=43200</h5>
@@ -48,11 +47,35 @@ const ResponseDisplay = () => {
               <h4>content-type</h4>
               <h5>application/json; charset=utf-8</h5>
             </div>
+
+            <div>
+              <h4>expires</h4>
+              <h5>-1</h5>
+            </div>
+
+            <div>
+              <h4>pragma</h4>
+              <h5>no-cache</h5>
+            </div>
           </div>
-          <div></div>
-          <div></div>
         </div>
-        <div></div>
+
+        <div>
+          <h3>Previous API Requests</h3>
+          <div>
+            <h3>3</h3>
+          </div>
+
+          <div>
+            <h4>https://abc.com</h4>
+            <h5>Status 200</h5>
+          </div>
+
+          <div>
+            <h4>https://abc.com/api/2</h4>
+            <h5>Status 404</h5>
+          </div>
+        </div>
       </div>
     </div>
   );
