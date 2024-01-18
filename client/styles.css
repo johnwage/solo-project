@@ -4,12 +4,14 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
-  height: 100%;
   position: relative;
   background-color: white;
   font-family: 'Proxima Nova', 'San Francisco', arial, sans-serif;
   color: #1d1d1d;
+}
+
+#root {
+  height: 100vh;
 }
 
 ul {
@@ -36,14 +38,22 @@ button {
 }
 
 .App {
+  height: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
 
 .NavBar {
+  width: 100px;
   background-color: #17a2b7;
   color: #5ecc9c;
+  position: relative;
+  overflow: hidden;
+}
+
+.NavBar ul {
+  width: 100%;
 }
 
 .NavBar li {
@@ -54,8 +64,98 @@ button {
   margin-top: 45px;
 }
 
-.NavBar a {
-  color: white;
+.circleLeft {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: #5ecc9c;
+  border-radius: 50%;
+  left: 25px;
+  top: 25px;
+}
+.circleRight {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  left: 47px;
+  top: 25px;
+}
+.semiCircleLeft {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: white;
+  border-radius: 0 0 50% 50%;
+  left: 25px;
+  top: 50px;
+}
+.semiCircleRight {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: #5ecc9c;
+  border-radius: 50% 50% 0 0;
+  left: 47px;
+  top: 50px;
+}
+
+/* .homeSelected {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 19px;
+  top: 100px;
+  z-index: 0;
+} */
+
+.topCircle {
+  width: 150px;
+  height: 150px;
+  background-color: #41abbb;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: -60px;
+  z-index: 0;
+}
+
+.bottomCircle {
+  width: 180px;
+  height: 180px;
+  background-color: #41abbb;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -40px;
+  z-index: 0;
+}
+
+.yellowSemiCircle {
+  position: absolute;
+  /* top: 20%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 200px;
+  border-radius: 150px 150px 0 0;
+  background-color: #fec726;
+  bottom: 170px;
+  left: 150px;
+}
+.blueSemiCircle {
+  position: absolute;
+  /* top: 20%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 200px;
+  border-radius: 0 0 150px 150px;
+  background-color: #7fd3e0;
+  bottom: 60px;
+  left: -25px;
 }
 
 .ResponseDisplay {
