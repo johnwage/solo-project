@@ -85,8 +85,8 @@ const RequestForm = () => {
 
       <div className='profile'>
         <img src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png' />
-        <h2>John Wage</h2>
-        <h3>johnwage</h3>
+        <h2>Codesmith</h2>
+        <h3>hello@codesmith.io</h3>
         <div className='profileButtons'>
           <button>Bell</button>
           <button>Edit Profile</button>
