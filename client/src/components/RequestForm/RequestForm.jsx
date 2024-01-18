@@ -1,10 +1,16 @@
 import React from 'react';
+import { useState } from 'react';
 import './RequestForm.css';
 
 const RequestForm = () => {
+  const [method, setMethod] = useState('GET');
+  const [inputURL, setInputURL] = useState('');
+
+  const handleSubmit = (e) => {};
+
   return (
     <form>
-      <select>
+      <select value={method} onChange={(e) => setMethod(e.target.value)}>
         <option value='GET'>GET</option>
         <option value='POST'>POST</option>
         <option value='PUT'>PUT</option>
@@ -17,6 +23,8 @@ const RequestForm = () => {
         type='text'
         name='urlInput'
         placeholder='https://API.com'
+        value={inputURL}
+        onChange={(e) => setInputURL(e.target.value)}
         required
       />
 

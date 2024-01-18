@@ -28,7 +28,7 @@ const ResponseDisplay = () => {
         <h3>Response Body</h3>
       </div>
 
-      <div>
+      {/* <div>
         <div>
           <div>
             <h3>Headers</h3>
@@ -76,7 +76,7 @@ const ResponseDisplay = () => {
             <h5>Status 404</h5>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

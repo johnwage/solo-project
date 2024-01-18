@@ -1,5 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
+import responseReducer from './responseSlice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    response: responseReducer,
+  },
 });
