@@ -357,8 +357,16 @@ button {
 }
 
 .requestSection button {
-  margin: 13px 0 0 0;
+  margin: 13px 10px 0 0;
+}
+
+.SendButton {
   width: 70px;
+}
+
+.SaveButton {
+  width: 40px;
+  background-color: #ffc627;
 }
 
 .jsonBody {

@@ -4,6 +4,7 @@ const controller = {};
 
 controller.saveRequest = (req, res, next) => {
   const { method, url, json_body } = req.body;
+  console.log('req.body', req.body);
   const queryString =
     'INSERT INTO api_endpoint_tests (method, url, json_body) ' +
     'VALUES ($1, $2, $3) ' +

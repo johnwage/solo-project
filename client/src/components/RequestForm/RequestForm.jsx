@@ -7,7 +7,7 @@ import {
   updateBody,
 } from '../../redux/responseSlice.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
 import './RequestForm.css';
 
 const RequestForm = () => {
@@ -55,6 +55,22 @@ const RequestForm = () => {
     dispatch(updateStatusCode(response.status));
     dispatch(updateTime(endTime));
     dispatch(updateBody(body));
+  };
+
+  const handleSave = async (e) => {
+    e.preventDefault();
+
+    const requestDetails = JSON.stringify({
+      method: method,
+      url: inputURL,
+      json_body: '',
+    });
+
+    await fetch('http://localhost:3000/api/request', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: requestDetails,
+    });
   };
 
   // get today's date and time
@@ -124,9 +140,23 @@ const RequestForm = () => {
             />
           </div>
 
-          <button className='SendButton' name='SendButton' type='submit'>
-            Send
-          </button>
+          <div>
+            <button className='SendButton' name='SendButton' type='submit'>
+              Send
+            </button>
+
+            <button
+              className='SaveButton'
+              name='SaveButton'
+              onClick={handleSave}
+            >
+              <FontAwesomeIcon
+                icon={faFloppyDisk}
+                size='lg'
+                style={{ color: '#ffffff' }}
+              />
+            </button>
+          </div>
         </form>
       </div>
 
