@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const controller = require('./controllers/controller.js');
 const app = express();
 const PORT = 3000;
 
@@ -16,13 +17,18 @@ app.get('/', function (req, res) {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
 
+// Route for saving requests
+app.post('/api/request', controller.saveRequest, (req, res) =>
+  res.status(200).json()
+);
+
 // Serve 404 error to all other unknown routes
 app.use('*', (req, res) => res.status(404).send('Page not found'));
 
 // Global error handler
 app.use((err, req, res, next) => {
   const defaultErr = {
-    log: 'Express error handler caught an unknown middlware error, uh-oh!',
+    log: 'Express error handler caught an unknown middlware error.',
     status: 500,
     message: { err: 'An error occured' },
   };
