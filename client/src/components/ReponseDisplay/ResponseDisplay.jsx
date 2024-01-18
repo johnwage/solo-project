@@ -9,29 +9,31 @@ const ResponseDisplay = () => {
   const time = useSelector((state) => state.response.time);
 
   return (
-    <div>
+    <div className='ResponseDisplay'>
       <h1>Welcome Back, John</h1>
       <h2>Send a request to an API endpoint to see the response</h2>
 
-      <div>
-        <div>
+      <div className='statusAndTime'>
+        <div className='statusCode'>
           <div>
             <h3>Status Code</h3>
             {statusCode !== 0 && <h4>{statusCode}</h4>}
+            <button>Details</button>
           </div>
-          <img />
+          <img src='https://cdn.dribbble.com/users/448097/screenshots/10852088/media/e6d3f89bf13555a67967b741b4cc5703.jpg' />
         </div>
 
-        <div>
+        <div className='time'>
           <div>
             <h3>Time</h3>
             {time !== 0 && <h4>{time} ms</h4>}
+            <button>Details</button>
           </div>
-          <img />
+          <img src='https://cdn.dribbble.com/users/183082/screenshots/4877814/media/879f9d6835c39d1f05fb228761a29097.png' />
         </div>
       </div>
 
-      <div>
+      <div className='responseBody'>
         <h3>Response Body</h3>
         <div>
           {body && (

@@ -55,30 +55,75 @@ const RequestForm = () => {
     dispatch(updateBody(body));
   };
 
+  // get today's date and time
+  const today = new Date();
+
+  // format date
+  const dateFormat = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+  const formattedDate = dateFormat.format(today);
+
+  // format day and time
+  const dayTimeFormat = new Intl.DateTimeFormat('en-US', {
+    weekday: 'long',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+    timeZoneName: 'short',
+  });
+  const formattedDayTime = dayTimeFormat.format(today);
+
   return (
-    <form onSubmit={handleSubmit}>
-      <select value={method} onChange={(e) => setMethod(e.target.value)}>
-        <option value='GET'>GET</option>
-        <option value='POST'>POST</option>
-        <option value='PUT'>PUT</option>
-        <option value='PATCH'>PATCH</option>
-        <option value='DELETE'>DELETE</option>
-      </select>
+    <div className='RequestForm'>
+      <div className='dateAndTime'>
+        <div className='date'>{formattedDate}</div>
+        <div className='datedTime'>{formattedDayTime}</div>
+      </div>
 
-      <input
-        className='Input'
-        type='text'
-        name='urlInput'
-        placeholder='https://API.com'
-        value={inputURL}
-        onChange={(e) => setInputURL(e.target.value)}
-        required
-      />
+      <div className='profile'>
+        <img src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png' />
+        <h2>John Wage</h2>
+        <h3>johnwage</h3>
+        <div>
+          <button>Bell</button>
+          <button>Edit Profile</button>
+        </div>
+      </div>
 
-      <button className='SendButton' name='SendButton' type='submit'>
-        Send
-      </button>
-    </form>
+      <div>
+        <h2>Request</h2>
+        <form onSubmit={handleSubmit}>
+          <select value={method} onChange={(e) => setMethod(e.target.value)}>
+            <option value='GET'>GET</option>
+            <option value='POST'>POST</option>
+            <option value='PUT'>PUT</option>
+            <option value='PATCH'>PATCH</option>
+            <option value='DELETE'>DELETE</option>
+          </select>
+
+          <input
+            className='Input'
+            type='text'
+            name='urlInput'
+            placeholder='https://API.com'
+            value={inputURL}
+            onChange={(e) => setInputURL(e.target.value)}
+            required
+          />
+
+          <button className='SendButton' name='SendButton' type='submit'>
+            Send
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <h2>JSON</h2>
+      </div>
+    </div>
   );
 };
 

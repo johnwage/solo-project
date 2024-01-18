@@ -2,49 +2,42 @@ import React from 'react';
 
 const NavBar = () => {
   return (
-    <nav className='leftColumn'>
-      <ul>
-        <li>
-          <img
-            className='logo'
-            src='https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram-1.png'
-            alt='Logo'
-          />
-        </li>
-      </ul>
+    <div className='NavBar'>
+      <nav>
+        <ul>
+          <li>
+            <img className='logo' src='' alt='Logo' />
+          </li>
+        </ul>
 
-      <div className='menu'>
-        <ul className='topMenu'>
+        <ul className='menu'>
           <li>
             <a className='homeSelected' href='/'>
               Home
             </a>
           </li>
           <li>
-            <a href='/'>Search</a>
+            <a href='/'>Board</a>
           </li>
           <li>
-            <a href='/'>Explore</a>
+            <a href='/'>Calendar</a>
           </li>
           <li>
-            <a href='/'>Reels</a>
+            <a href='/'>Grid</a>
           </li>
           <li>
-            <a href='/'>Messages</a>
+            <a href='/'>Graph</a>
           </li>
           <li>
-            <a href='/'>Notifications</a>
+            <a href='/'>People</a>
           </li>
           <li>
-            <a href='/'>Create</a>
-          </li>
-          <li>
-            <a href='/'>Profile</a>
+            <a href='/'>Logout</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 
-export default NarBar;
+export default NavBar;
