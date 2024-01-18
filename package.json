@@ -11,7 +11,9 @@
   "author": "johnwage",
   "license": "ISC",
   "dependencies": {
+    "@codemirror/lang-json": "^6.0.1",
     "@reduxjs/toolkit": "^2.0.1",
+    "@uiw/react-codemirror": "^4.21.21",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "css-loader": "^6.8.1",

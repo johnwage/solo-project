@@ -1,6 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import CodeMirror from '@uiw/react-codemirror';
+import { json } from '@codemirror/lang-json';
 
 const ResponseDisplay = () => {
+  const body = useSelector((state) => state.response.body);
+  const statusCode = useSelector((state) => state.response.statusCode);
+  const time = useSelector((state) => state.response.time);
+
   return (
     <div>
       <h1>Welcome Back, John</h1>
@@ -10,7 +17,7 @@ const ResponseDisplay = () => {
         <div>
           <div>
             <h3>Status Code</h3>
-            <h4>200</h4>
+            {statusCode !== 0 && <h4>{statusCode}</h4>}
           </div>
           <img />
         </div>
@@ -18,7 +25,7 @@ const ResponseDisplay = () => {
         <div>
           <div>
             <h3>Time</h3>
-            <h4>ms</h4>
+            {time !== 0 && <h4>{time} ms</h4>}
           </div>
           <img />
         </div>
@@ -26,6 +33,16 @@ const ResponseDisplay = () => {
 
       <div>
         <h3>Response Body</h3>
+        <div>
+          {body && (
+            <CodeMirror
+              value={JSON.stringify(body, null, 2)}
+              height='200px'
+              extensions={[json()]}
+              readOnly
+            />
+          )}
+        </div>
       </div>
 
       {/* <div>
