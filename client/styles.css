@@ -43,6 +43,7 @@ button {
 
 .NavBar {
   background-color: #17a2b7;
+  color: #5ecc9c;
 }
 
 .NavBar li {
@@ -53,9 +54,19 @@ button {
   margin-top: 45px;
 }
 
+.NavBar a {
+  color: white;
+}
+
 .ResponseDisplay {
+  width: 50rem;
+  /* height: 100rem; */
+  background-color: white;
   display: flex;
   flex-direction: column;
+  /* flex-grow: 1; */
+  /* border-radius: 20px 0 0 20px; */
+  margin: 0 100px;
 }
 
 .ResponseDisplay h1 {
@@ -144,9 +155,126 @@ button {
   font-weight: 650;
 }
 
-.NavBar {
-  color: #5ecc9c;
+.RequestForm {
+  background-color: #e3f2f5;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-radius: 20px 0 0 20px; */
 }
-.NavBar a {
+
+.dateAndTime {
+  width: 350px;
+  height: 100px;
+  background-color: #17a2b7;
+  margin: 50px auto 10px auto;
+  padding: 25px;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
   color: white;
+  font-size: 27px;
+  margin-bottom: 7px;
+}
+
+.datedTime {
+  color: #e3f2f5;
+  font-size: 20px;
+}
+
+.profile {
+  width: 350px;
+  height: 270px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 17px;
+  padding: 30px;
+  margin: 17px 0;
+}
+
+.profile img {
+  width: 110px;
+  padding-bottom: 20px;
+}
+
+.profile h2,
+.profile h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.profile h3 {
+  font-weight: 500;
+  color: grey;
+  padding: 5px;
+}
+
+.profile button {
+  margin: 10px 4px;
+  padding: 10px 18px;
+}
+
+.requestSection {
+  width: 350px;
+  height: 145px;
+  background-color: white;
+  border-radius: 17px;
+  padding: 10px 25px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.requestSection h2 {
+  font-size: 17px;
+}
+
+.requestSection form {
+  display: flex;
+  flex-direction: column;
+}
+
+.requestSection select {
+  height: 30px;
+}
+
+.requestSection input {
+  flex-grow: 1;
+  width: 220px;
+  height: 30px;
+}
+
+.requestSection button {
+  margin: 11px 0;
+  width: 70px;
+}
+
+.jsonBody {
+  width: 350px;
+  height: 145px;
+  border-radius: 17px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+  margin: 16px 0 25px 0;
+}
+
+.jsonBody h2 {
+  font-size: 17px;
+}
+
+.jsonBody button {
+  width: 60px;
+  height: 30px;
+  background-color: #4ab14e;
+  border-radius: 5px;
+  padding: 6px 14px;
+  margin-top: 8px;
 }

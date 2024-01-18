@@ -87,32 +87,34 @@ const RequestForm = () => {
         <img src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png' />
         <h2>John Wage</h2>
         <h3>johnwage</h3>
-        <div>
+        <div className='profileButtons'>
           <button>Bell</button>
           <button>Edit Profile</button>
         </div>
       </div>
 
-      <div>
+      <div className='requestSection'>
         <h2>Request</h2>
         <form onSubmit={handleSubmit}>
-          <select value={method} onChange={(e) => setMethod(e.target.value)}>
-            <option value='GET'>GET</option>
-            <option value='POST'>POST</option>
-            <option value='PUT'>PUT</option>
-            <option value='PATCH'>PATCH</option>
-            <option value='DELETE'>DELETE</option>
-          </select>
+          <div>
+            <select value={method} onChange={(e) => setMethod(e.target.value)}>
+              <option value='GET'>GET</option>
+              <option value='POST'>POST</option>
+              <option value='PUT'>PUT</option>
+              <option value='PATCH'>PATCH</option>
+              <option value='DELETE'>DELETE</option>
+            </select>
 
-          <input
-            className='Input'
-            type='text'
-            name='urlInput'
-            placeholder='https://API.com'
-            value={inputURL}
-            onChange={(e) => setInputURL(e.target.value)}
-            required
-          />
+            <input
+              className='Input'
+              type='text'
+              name='urlInput'
+              placeholder='https://API.com'
+              value={inputURL}
+              onChange={(e) => setInputURL(e.target.value)}
+              required
+            />
+          </div>
 
           <button className='SendButton' name='SendButton' type='submit'>
             Send
@@ -120,8 +122,9 @@ const RequestForm = () => {
         </form>
       </div>
 
-      <div>
-        <h2>JSON</h2>
+      <div className='jsonBody'>
+        <h2>Body</h2>
+        <button>JSON</button>
       </div>
     </div>
   );
