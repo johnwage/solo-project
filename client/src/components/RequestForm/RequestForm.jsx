@@ -6,6 +6,8 @@ import {
   updateTime,
   updateBody,
 } from '../../redux/responseSlice.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 import './RequestForm.css';
 
 const RequestForm = () => {
@@ -88,7 +90,13 @@ const RequestForm = () => {
         <h2>Codesmith</h2>
         <h3>hello@codesmith.io</h3>
         <div className='profileButtons'>
-          <button>Bell</button>
+          <button>
+            <FontAwesomeIcon
+              icon={faBell}
+              size='lg'
+              style={{ color: '#ffffff' }}
+            />
+          </button>
           <button>Edit Profile</button>
         </div>
       </div>
