@@ -10,7 +10,7 @@ const ResponseDisplay = () => {
 
   return (
     <div className='ResponseDisplay'>
-      <h1>Welcome Back, Codesmith</h1>
+      <h1>Welcome Back, John</h1>
       <h2>Send a request to an API endpoint to see the response</h2>
 
       <div className='statusAndTime'>
