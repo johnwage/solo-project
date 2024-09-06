@@ -375,9 +375,14 @@ button {
   border-radius: 17px;
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 10px 25px;
   margin: 16px 0 25px 0;
+}
+
+.jsonBodyHeader {
+  display: flex;
+  justify-content: space-between;
 }
 
 .jsonBody h2 {

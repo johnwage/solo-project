@@ -160,8 +160,11 @@ const RequestForm = () => {
       </div>
 
       <div className='jsonBody'>
-        <h2>Body</h2>
-        <button>JSON</button>
+        <div className='jsonBodyHeader'>
+          <h2>Body</h2>
+          <button>JSON</button>
+        </div>
+        {/* <textarea name='jsonBodyInput' cols='1' rows='3'></textarea> */}
       </div>
     </div>
   );
