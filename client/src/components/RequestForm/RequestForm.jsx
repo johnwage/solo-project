@@ -8,7 +8,6 @@ import {
 } from '../../redux/responseSlice.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
-import './RequestForm.css';
 
 const RequestForm = () => {
   const [method, setMethod] = useState('GET');
