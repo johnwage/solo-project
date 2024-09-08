@@ -47,6 +47,20 @@ const ResponseDisplay = () => {
         </div>
       </div>
 
+      <div className='responseBody'>
+          <h3>Saved API Requests</h3>
+          
+          <div>
+            <h4>https://abc.com</h4>
+            <h5>Status 200</h5>
+          </div>
+
+          <div>
+            <h4>https://abc.com/api/2</h4>
+            <h5>Status 404</h5>
+          </div>
+        </div>
+
       {/* <div>
         <div>
           <div>
