@@ -59,6 +59,7 @@ const ResponseDisplay = () => {
             <h4>https://abc.com/api/2</h4>
             <h5>Status 404</h5>
           </div>
+          <button>View more</button>
         </div>
 
       {/* <div>
