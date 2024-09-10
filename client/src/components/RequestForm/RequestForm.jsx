@@ -62,7 +62,7 @@ const RequestForm = () => {
     const requestDetails = JSON.stringify({
       method: method,
       url: inputURL,
-      json_body: '',
+      json_body: '', // <-- This will need to change to piece of state once JSON Body input field is set up
     });
 
     await fetch('http://localhost:3000/api/request', {
